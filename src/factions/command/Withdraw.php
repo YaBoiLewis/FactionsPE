@@ -45,7 +45,7 @@ class Withdraw extends Command
         $this->addRequirement(new FactionPermission(Permissions::getById(Permission::WITHDRAW)));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $faction = Members::get($sender)->getFaction();
         $amount = $this->getArgument(0);
