@@ -31,7 +31,7 @@ use pocketmine\command\CommandSender;
 class ClaimAuto extends ClaimOne
 {
 
-    public function perform(CommandSender $sender, $label, array $args): bool
+    public function perform(CommandSender $sender, string $label, array $args): bool
     {
         $member = Members::get($sender);
         $faction = $this->getArgument($this->getFactionArgIndex());
