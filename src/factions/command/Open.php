@@ -37,7 +37,7 @@ class Open extends Command
         $this->addRequirement(new FactionRole(Relation::LEADER));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $msender = Members::get($sender);
         $faction = $msender->getFaction();
