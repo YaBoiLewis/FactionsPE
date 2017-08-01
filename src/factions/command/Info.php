@@ -39,7 +39,7 @@ class Info extends Command
         $this->addParameter((new FactionParameter("faction"))->setDefaultValue("self"));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
 	    // Args
         /** @var Faction $faction */
