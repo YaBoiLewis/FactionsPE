@@ -41,7 +41,7 @@ class Status extends Command
     }
 
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $msender = Members::get($sender);
         $faction = $this->getArgument(0);
