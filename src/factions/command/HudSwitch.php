@@ -10,7 +10,7 @@ use pocketmine\command\CommandSender;
 class HudSwitch extends Command
 {
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $member = Members::get($sender);
         $member->toggleHUD();
