@@ -25,7 +25,7 @@ class PowerSet extends Command {
         $this->addParameter(new Parameter("amount", Parameter::TYPE_INTEGER));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $target = $this->getArgument(0);
         $amount = $this->getArgument(1);
