@@ -30,7 +30,7 @@ class RelationWishes extends Command
         $this->addParameter((new FactionParameter("faction|member", true))->setDefaultValue("self"));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         # TODO
         # ---------
