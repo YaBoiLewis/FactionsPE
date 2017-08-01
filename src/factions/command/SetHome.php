@@ -30,7 +30,7 @@ class SetHome extends Command
         $this->addParameter((new Parameter("z"))->setDefaultValue(null));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
     	if(!$sender instanceof Player) return false;
         $member = Members::get($sender);
