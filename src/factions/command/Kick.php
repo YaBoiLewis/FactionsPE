@@ -42,7 +42,7 @@ class Kick extends Command
         $this->addRequirement(new FactionPermission(Permissions::getById(Permission::KICK)));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
     	if(!$sender instanceof Player) return false;
         $target = $this->getArgument(0);
