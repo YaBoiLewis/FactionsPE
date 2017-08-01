@@ -27,7 +27,7 @@ use pocketmine\command\CommandSender;
 class Reload extends Command
 {
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         # Reload config
         $this->getPlugin()->reloadConfig();
