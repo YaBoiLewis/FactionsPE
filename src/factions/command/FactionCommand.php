@@ -92,7 +92,7 @@ class FactionCommand extends Command
      * @return bool
      */
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         if ($this->endPoint !== $this) return true;
 
