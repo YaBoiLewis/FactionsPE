@@ -36,7 +36,7 @@ class Override extends Command
         $this->addParameter((new Parameter("on|off", Parameter::TYPE_BOOLEAN))->setDefaultValue(null));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $msender = Members::get($sender);
 
