@@ -34,7 +34,7 @@ class Balance extends Command
         //$this->addRequirement(new FactionPermission(Permissions::getById(Permission::MONEY_BALANCE)));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $faction = $this->getArgument(0);
 
