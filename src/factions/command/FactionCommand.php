@@ -20,8 +20,6 @@
 
 namespace factions\command;
 
-use dominate\Command;
-use dominate\parameter\Parameter;
 use factions\FactionsPE;
 use factions\manager\Permissions;
 use factions\relation\Relation as Rel;
