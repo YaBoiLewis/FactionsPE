@@ -19,7 +19,7 @@ class Top extends Command
         $this->addParameter((new Parameter("page", Parameter::TYPE_INTEGER))->setDefaultValue(1));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $height = 5;
         if ($sender instanceof ConsoleCommandSender) $height = 20;
