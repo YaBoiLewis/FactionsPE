@@ -39,7 +39,7 @@ class Map extends Command
         $this->addRequirement(new SimpleRequirement(SimpleRequirement::PLAYER));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
     	if(!$sender instanceof Player) return false;
         if (isset($args[0])) {
