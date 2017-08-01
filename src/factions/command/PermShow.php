@@ -40,7 +40,7 @@ class PermShow extends Command
         $this->addParameter((new FactionParameter("faction"))->setDefaultValue("self"));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $perms = $this->getArgument(1);
         if (!is_array($perms)) $perms = [$perms];
