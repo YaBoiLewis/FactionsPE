@@ -26,7 +26,7 @@ use factions\utils\Text;
 
 class Version extends Command {
 
-	public function perform(CommandSender $sender, $label, array $args) {
+	public function perform(CommandSender $sender, string $label, array $args) :bool {
 		$sender->sendMessage(Text::titleize(Localizer::translatable("version-info-header")));
 		$sender->sendMessage(Localizer::translatable("version", [
 			"version" => $this->getPlugin()->getDescription()->getVersion(),
