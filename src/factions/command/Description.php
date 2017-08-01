@@ -34,7 +34,7 @@ class Description extends Command {
 		//$this->addRequirement(new FactionRequirement(FactionRequirement::IN_FACTION));
 	}
 
-	public function perform(CommandSender $sender, $label, array $args) {
+	public function perform(CommandSender $sender, string $label, array $args) :bool{
 		if(!($m = Members::get($sender))->isLeader() && !$m->isOverriding()) {
 			return ["requirement.faction-permission-error", ["perm_desc" => "set description"]]; # Not fully translatable TODO
 		}
