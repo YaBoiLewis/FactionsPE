@@ -17,7 +17,7 @@ class Player extends Command
         $this->addParameter((new MemberParameter("player", MemberParameter::ANY_MEMBER))->setDefaultValue("self"));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $member = $this->getArgument(0);
 
