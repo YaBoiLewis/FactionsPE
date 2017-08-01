@@ -25,7 +25,7 @@ class RelationSetQuick extends Command
         $this->real = $this->getParent()->getChild("relation")->getChild("set");
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         return $this->real->execute($sender, $label, [$args[0], $this->getName()]);
     }
