@@ -35,7 +35,7 @@ class Help extends Command
         $this->addParameter((new Parameter("page|command"))->setDefaultValue(1));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         if (count($args) === 0) {
             $command = "";
