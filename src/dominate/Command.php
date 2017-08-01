@@ -381,11 +381,11 @@ class Command extends PocketMineCommand implements PluginIdentifiableCommand {
      * @param array $args
      * @return bool
      */
-    public function prepare(CommandSender $sender, $label, array $args) : bool {
+    public function prepare(CommandSender $sender, string $label, array $args) : bool {
 		return true;
 	}
 
-	public function execute(CommandSender $sender, $label, array $args) {
+	public function execute(CommandSender $sender, string $label, array $args) : bool {
 		$this->sender 	= $sender;
 		$this->label 	= $label;
 		$this->args 	= $args;
