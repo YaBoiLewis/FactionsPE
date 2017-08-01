@@ -28,7 +28,7 @@ class RelationSet extends Command
         $this->addParameter(new RelationParameter("relation", RelationParameter::RELATION));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         /** @var Faction $faction */
         $faction = $this->getArgument(0);
