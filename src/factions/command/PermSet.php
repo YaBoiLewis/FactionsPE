@@ -47,7 +47,7 @@ class PermSet extends Command
         $this->addParameter((new FactionParameter("faction"))->setDefaultValue("me"));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
 
         $member = Members::get($sender);
