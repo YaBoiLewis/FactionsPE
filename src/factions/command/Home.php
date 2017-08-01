@@ -47,7 +47,7 @@ class Home extends Command
         $this->addRequirement(new FactionPermission(Permissions::getById(Permission::HOME)));
     }
 
-    public function perform(CommandSender $sender, $label, array $args): bool
+    public function perform(CommandSender $sender, string $label, array $args): bool
     {
     	if(!$sender instanceof Player) return false;
         $member = Members::get($sender);
