@@ -38,7 +38,7 @@ class PermList extends Command
         $this->addParameter((new Parameter("page", Parameter::TYPE_INTEGER, 1))->setDefaultValue(1));
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         // Args
         $page = $this->getArgument(0);
