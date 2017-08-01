@@ -38,7 +38,7 @@ class ListCmd extends Command
         $this->addParameter((new Parameter("page", Parameter::TYPE_INTEGER))->setDefaultValue(1)); // /f list [page=1]
     }
 
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args) :bool
     {
         $page = $this->getArgument(0);
         $factions = Factions::getAll();
