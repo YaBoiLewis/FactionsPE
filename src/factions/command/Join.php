@@ -37,7 +37,7 @@ class Join extends Command
      * @return BOOL
      * @throws \Exception
      */
-    public function perform(CommandSender $sender, $label, array $args)
+    public function perform(CommandSender $sender, string $label, array $args)
     {
     	if(!$sender instanceof Player) return false;
         $msender = Members::get($sender);
