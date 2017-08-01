@@ -49,7 +49,7 @@ class Link extends Command {
         }
 	}
 
-	public function execute(CommandSender $sender, $label, array $args) {
+	public function execute(CommandSender $sender, string $label, array $args) :bool{
 		return true;
 	}
 
